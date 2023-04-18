@@ -1,0 +1,31 @@
+{
+  "name": "literal-utility-types",
+  "version": "1.0.0",
+  "description": "A collection of types for manipulating literals",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CapnBenJMan/literal-utility-types.git"
+  },
+  "keywords": [
+    "types",
+    "literals",
+    "typescript",
+    "ts"
+  ],
+  "author": "CapnBenJMan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CapnBenJMan/literal-utility-types/issues"
+  },
+  "homepage": "https://github.com/CapnBenJMan/literal-utility-types#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
