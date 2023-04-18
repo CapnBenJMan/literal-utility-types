@@ -3,15 +3,13 @@ export type Length<T extends any[]> = T extends { length: infer L } ? L : never
 type templateable = string | number | bigint | boolean | null | undefined
 
 export type join<
-	T extends ({ toString(): string } | templateable)[],
+	T extends templateable[],
 	D extends string = ", ",
 	str extends string = ""
 > =
 	Length<T> extends 0 ? str :
-	// @ts-ignore
 	Length<T> extends 1 ? `${T[0]}` :
-	T extends [infer A, infer B, ...infer C] ?
-	// @ts-ignore
+	T extends [infer A extends templateable, infer B extends templateable, ...infer C extends templateable[]] ?
 	join<C, D, `${str}${A}${D}${B}`> :
 	str
 
