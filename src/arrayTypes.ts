@@ -17,9 +17,9 @@ export type flat<T extends any[]> = T extends [infer H, ...infer R]
 	? H extends any[]
 	? [...flat<H>, ...flat<R>]
 	: [H, ...flat<R>]
-	: T
+	: []
 
-export type last<T extends any[], U = T extends (infer A)[] ? A : any> = T extends [...U[], infer B] ? B : never
+export type last<T extends any[], U = T extends (infer A)[] ? A : any> = T extends [...U[], infer B extends U] ? B : never
 
 export type Tuple<T, N extends number> = N extends N ? number extends N ? T[] : _TupleOf<T, N, []> : never
 type _TupleOf<T, N extends number, R extends unknown[]> = R['length'] extends N ? R : _TupleOf<T, N, [T, ...R]>
