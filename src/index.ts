@@ -1,4 +1,4 @@
-export type { Length, Tuple, flat, join, last, } from "./arrayTypes"
+export type { Length, Tuple, Flat, Join, Last, } from "./arrayTypes"
 export type {
-	cSplit, concat, conditionalSplit, includes, repeat, replace, split, trim, trimLeft, trimRight,
+	CSplit, Concat, ConditionalSplit, Includes, Repeat, Replace, Split, Trim, TrimLeft, TrimRight,
 } from "./stringTypes"
